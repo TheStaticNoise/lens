@@ -1,0 +1,19 @@
+! - 
+! H
+! !
+
+def cpu 
+-scp
+! Emu
+! dec
+! fetch
+! rew
+! snap
+
+
+def relmap cpu
+Fetch -! dec -! emu -! (rew ~ snap) 
+
+spec cpu
+6502
+
